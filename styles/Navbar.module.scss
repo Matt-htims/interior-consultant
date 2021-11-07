@@ -99,7 +99,7 @@
 	justify-content: center;
 	align-items: center;
 
-	transition: opacity 0.4s ease-in-out, z-index 0.4s;
+	transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
 
 	:not(:last-child) {
 		padding-bottom: 32px;
