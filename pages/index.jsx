@@ -4,6 +4,9 @@ import styles from '../styles/Home.module.scss';
 
 import { MdArrowRightAlt } from 'react-icons/md';
 
+// Components
+import Card from '../components/Card';
+
 export default function Home() {
 	return (
 		<div className={styles.container}>
@@ -34,8 +37,11 @@ export default function Home() {
 						alt="Interior of a room"
 						width={737}
 						height={555}
+						layout="responsive"
 					/>
-					<div className={styles.card}></div>
+					<div className={styles.card}>
+						<Card />
+					</div>
 				</div>
 			</main>
 		</div>

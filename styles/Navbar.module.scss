@@ -9,6 +9,11 @@
 	position: sticky;
 	top: 0;
 	z-index: 10;
+	background-color: #181719;
+
+	@include mobile() {
+		padding: 19px 12px;
+	}
 
 	h1 {
 		font: $logo;
@@ -20,7 +25,7 @@
 	.navItems {
 		display: flex;
 		:not(:last-child) {
-			padding-right: 86px;
+			margin-right: 86px;
 		}
 
 		@include mobile() {
@@ -32,6 +37,12 @@
 			color: white;
 			p {
 				padding: 6px 0;
+			}
+
+			&:hover {
+				p {
+					border-bottom: 2px solid white;
+				}
 			}
 		}
 
@@ -102,7 +113,7 @@
 	transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
 
 	:not(:last-child) {
-		padding-bottom: 32px;
+		margin-bottom: 32px;
 	}
 
 	.navItem {
@@ -112,12 +123,9 @@
 			width: max-content;
 			padding: 6px 0;
 		}
-	}
 
-	.activeNavItem {
-		font: $active-nav;
-		p {
-			border-bottom: 2px solid white;
+		&:hover {
+			font: $active-nav;
 		}
 	}
 }

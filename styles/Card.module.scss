@@ -1,0 +1,24 @@
+@import 'mixins';
+@import 'variables';
+
+.card {
+	background-color: #181719;
+	color: white;
+
+	.header {
+		display: flex;
+		align-items: center;
+
+		.image {
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 19px;
+		}
+
+		.headerText {
+			h4 {
+				font: $copy-sm;
+			}
+		}
+	}
+}

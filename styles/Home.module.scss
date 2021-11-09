@@ -1,9 +1,18 @@
 @import 'mixins';
 @import 'variables';
 
+.globalContainer {
+	max-width: 1700px;
+	margin: auto;
+}
+
 .container {
 	min-height: 60vh;
 	margin: 150px 77px;
+
+	@include mobile() {
+		margin: 30px 12px;
+	}
 }
 
 .main {
@@ -17,7 +26,7 @@
 		.copy {
 			width: 85%;
 			color: white;
-
+			max-width: 580px;
 			h2 {
 				font: $title;
 				margin-bottom: 40px;
@@ -48,5 +57,38 @@
 	.image {
 		width: 60%;
 		max-width: 737px;
+	}
+
+	@include mobile() {
+		display: block;
+
+		.copyContainer {
+			margin-bottom: 30px;
+			.copy {
+				width: 100%;
+				max-width: 600px;
+
+				h2 {
+					font: $title-mobile;
+					margin-bottom: 25px;
+				}
+
+				.mainCopy {
+					font: $copy-mobile;
+					margin-bottom: 25px;
+				}
+
+				button {
+					p {
+						font: $link-mobile;
+					}
+				}
+			}
+		}
+
+		.image {
+			width: 100%;
+			max-width: 10000px;
+		}
 	}
 }
