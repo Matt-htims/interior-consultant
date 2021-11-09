@@ -4,20 +4,67 @@
 .card {
 	background-color: #181719;
 	color: white;
+	width: 410px;
+	padding: 18px 26px 34px 26px;
 
 	.header {
 		display: flex;
 		align-items: center;
+		margin-bottom: 25px;
 
 		.image {
 			border-radius: 50%;
 			overflow: hidden;
 			margin-right: 19px;
+			margin-left: 5px;
 		}
 
 		.headerText {
 			h4 {
 				font: $copy-sm;
+				margin-bottom: 8px;
+			}
+
+			p {
+				font: $copy-xs;
+				color: #828282;
+			}
+		}
+	}
+
+	.body {
+		h3 {
+			font: $subtitle;
+			width: 19ch;
+		}
+	}
+
+	@include mobile() {
+		width: 300px;
+		padding: 13px 19px 25px 19px;
+
+		.header {
+			margin-bottom: 18px;
+
+			.image {
+				width: 36px;
+			}
+
+			.headerText {
+				h4 {
+					font: $copy-xs;
+					margin-bottom: 5.85px;
+				}
+
+				p {
+					font: $copy-xxs;
+				}
+			}
+		}
+
+		.body {
+			h3 {
+				font: $subtitle-mobile;
 			}
 		}
 	}

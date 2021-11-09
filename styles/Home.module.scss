@@ -11,7 +11,8 @@
 	margin: 150px 77px;
 
 	@include mobile() {
-		margin: 30px 12px;
+		min-height: 100%;
+		margin: 30px 12px 200px 12px;
 	}
 }
 
@@ -55,8 +56,15 @@
 	}
 
 	.image {
+		position: relative;
 		width: 60%;
 		max-width: 737px;
+
+		.card {
+			position: absolute;
+			bottom: -110px;
+			right: 30px;
+		}
 	}
 
 	@include mobile() {
@@ -89,6 +97,11 @@
 		.image {
 			width: 100%;
 			max-width: 10000px;
+
+			.card {
+				bottom: -85px;
+				right: 30px;
+			}
 		}
 	}
 }
